@@ -6,6 +6,10 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.ToolBar;
 import org.eclipse.swt.widgets.ToolItem;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.widgets.Menu;
+import org.eclipse.swt.widgets.MenuItem;
 
 
 public class Main {
@@ -53,33 +57,6 @@ public class Main {
 		btnHentData.setBounds(39, 221, 94, 28);
 		btnHentData.setText("Hent data");
 		
-		ToolBar toolBar = new ToolBar(shlAnalyseverktyForElgdata, SWT.FLAT | SWT.RIGHT);
-		toolBar.setBounds(0, 0, 749, 20);
-		
-		ToolItem tltmHjem = new ToolItem(toolBar, SWT.NONE);
-		tltmHjem.setText("Hjem");
-		
-		ToolItem tltmImport = new ToolItem(toolBar, SWT.NONE);
-		tltmImport.setText("Import");
-		
-		ToolItem tltmExport = new ToolItem(toolBar, SWT.DROP_DOWN);
-		tltmExport.setText("Export");
-		
-		ToolItem tltmStatistikk = new ToolItem(toolBar, SWT.DROP_DOWN);
-		tltmStatistikk.setText("Statistikk");
-		
-		ToolItem tltmDropdownItem = new ToolItem(toolBar, SWT.DROP_DOWN);
-		tltmDropdownItem.setText("DropDown Item");
-		
-		ToolItem tltmRegistrering = new ToolItem(toolBar, SWT.DROP_DOWN);
-		tltmRegistrering.setText("Registrering");
-		
-		ToolItem tltmArkiv = new ToolItem(toolBar, SWT.DROP_DOWN);
-		tltmArkiv.setText("Arkiv");
-		
-		ToolItem tltmHjelp = new ToolItem(toolBar, SWT.NONE);
-		tltmHjelp.setText("Hjelp");
-		
 		Combo combo = new Combo(shlAnalyseverktyForElgdata, SWT.NONE);
 		combo.setBounds(159, 188, 165, 22);
 		
@@ -89,6 +66,23 @@ public class Main {
 		
 		text = new Text(shlAnalyseverktyForElgdata, SWT.BORDER);
 		text.setBounds(342, 76, 303, 136);
+		
+		Menu menu = new Menu(shlAnalyseverktyForElgdata, SWT.BAR);
+		shlAnalyseverktyForElgdata.setMenuBar(menu);
+		
+		MenuItem mntmRegistrering = new MenuItem(menu, SWT.CASCADE);
+		mntmRegistrering.setText("registrering");
+		
+		Menu menu_1 = new Menu(mntmRegistrering);
+		mntmRegistrering.setMenu(menu_1);
+		
+		MenuItem mntmTannanalyse = new MenuItem(menu_1, SWT.NONE);
+		mntmTannanalyse.setText("tannanalyse");
+		
+		MenuItem mntmVrdata = new MenuItem(menu_1, SWT.NONE);
+		mntmVrdata.setText("v\u00E6rdata");
+		
+		
 
 	}
 }
