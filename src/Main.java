@@ -11,9 +11,16 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.custom.CLabel;
+import com.sun.xml.internal.ws.api.pipe.NextAction;
+import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.databinding.beans.PojoProperties;
+import org.eclipse.core.databinding.observable.Realm;
+import org.eclipse.jface.databinding.swt.SWTObservables;
 
 
 public class Main {
+	private DataBindingContext m_bindingContext;
 
 	protected Shell shlAnalyseverktyForElgdata;
 	private Text text;
@@ -23,12 +30,17 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		try {
-			Main window = new Main();
-			window.open();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		Display display = Display.getDefault();
+		Realm.runWithDefault(SWTObservables.getRealm(display), new Runnable() {
+			public void run() {
+				try {
+					Main window = new Main();
+					window.open();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 
 	/**
@@ -158,7 +170,6 @@ public class Main {
 		btnHjelp.setBounds(344, -24, 75, 25);
 		btnHjelp.setText("HJELP?");
 		
-		
 
-	}
+}
 }
