@@ -14,7 +14,7 @@ import org.eclipse.swt.custom.CLabel;
 
 
 public class Main {
-//test
+//Hei
 	protected Shell shlAnalyseverktyForElgdata;
 	private Text text;
 

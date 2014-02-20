@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/SWT_LIB"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/SWT_LIB2"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SWT_LIB4"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Swt"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
