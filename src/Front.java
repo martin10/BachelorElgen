@@ -22,11 +22,15 @@ import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Label;
 import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
 
 
 public class Front {
 
 	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -119,11 +123,11 @@ public class Front {
 		
 		TextArea textArea = new TextArea();
 		textArea.setText("Import: Forklaring...");
-		textArea.setBounds(0, 50, 345, 143);
+		textArea.setBounds(38, 145, 345, 143);
 		frame.getContentPane().add(textArea);
 		
 		Label label = new Label("Import: Forklaring");
-		label.setBounds(0, 50, 327, 110);
+		label.setBounds(139, 139, 187, 66);
 		frame.getContentPane().add(label);
 		
 		JButton btnNewButton = new JButton("Neste");
@@ -135,5 +139,27 @@ public class Front {
 		scrollbar.setOrientation(Scrollbar.HORIZONTAL);
 		scrollbar.setBounds(305, 199, 40, 40);
 		frame.getContentPane().add(scrollbar);
+		
+		JButton btnLoggInn = new JButton("Logg Inn");
+		btnLoggInn.setBounds(153, 157, 117, 29);
+		frame.getContentPane().add(btnLoggInn);
+		
+		textField = new JTextField();
+		textField.setBounds(153, 111, 134, 28);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(153, 71, 134, 28);
+		frame.getContentPane().add(textField_1);
+		textField_1.setColumns(10);
+		
+		JLabel lblBrukernavn = new JLabel("Brukernavn");
+		lblBrukernavn.setBounds(68, 77, 79, 16);
+		frame.getContentPane().add(lblBrukernavn);
+		
+		JLabel lblPassord = new JLabel("Passord");
+		lblPassord.setBounds(68, 117, 61, 16);
+		frame.getContentPane().add(lblPassord);
 	}
 }
