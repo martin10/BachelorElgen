@@ -146,7 +146,7 @@ public class Front {
 		frame.getContentPane().add(btnLoggInn);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(79, 98, 134, 28);
+		textField_1.setBounds(79, 47, 134, 28);
 		frame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 		
@@ -160,7 +160,7 @@ public class Front {
 		
 		passwordField = new JPasswordField();
 		passwordField.setToolTipText("jgvfj");
-		passwordField.setBounds(79, 47, 134, 28);
+		passwordField.setBounds(79, 98, 134, 28);
 		frame.getContentPane().add(passwordField);
 	}
 }
