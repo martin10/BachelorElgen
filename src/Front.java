@@ -24,13 +24,14 @@ import java.awt.Label;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JPasswordField;
 
 
 public class Front {
 
 	private JFrame frame;
-	private JTextField textField;
 	private JTextField textField_1;
+	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -144,11 +145,6 @@ public class Front {
 		btnLoggInn.setBounds(79, 146, 117, 29);
 		frame.getContentPane().add(btnLoggInn);
 		
-		textField = new JTextField();
-		textField.setBounds(79, 98, 134, 28);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
-		
 		textField_1 = new JTextField();
 		textField_1.setBounds(79, 47, 134, 28);
 		frame.getContentPane().add(textField_1);
@@ -161,5 +157,10 @@ public class Front {
 		JLabel lblPassord = new JLabel("Passord");
 		lblPassord.setBounds(6, 104, 61, 16);
 		frame.getContentPane().add(lblPassord);
+		
+		passwordField = new JPasswordField();
+		passwordField.setToolTipText("jgvfj");
+		passwordField.setBounds(79, 98, 134, 28);
+		frame.getContentPane().add(passwordField);
 	}
 }
