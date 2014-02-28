@@ -123,11 +123,11 @@ public class Front {
 		
 		TextArea textArea = new TextArea();
 		textArea.setText("Import: Forklaring...");
-		textArea.setBounds(38, 145, 345, 143);
+		textArea.setBounds(247, 47, 187, 104);
 		frame.getContentPane().add(textArea);
 		
 		Label label = new Label("Import: Forklaring");
-		label.setBounds(139, 139, 187, 66);
+		label.setBounds(253, 47, 187, 66);
 		frame.getContentPane().add(label);
 		
 		JButton btnNewButton = new JButton("Neste");
@@ -141,25 +141,25 @@ public class Front {
 		frame.getContentPane().add(scrollbar);
 		
 		JButton btnLoggInn = new JButton("Logg Inn");
-		btnLoggInn.setBounds(153, 157, 117, 29);
+		btnLoggInn.setBounds(79, 146, 117, 29);
 		frame.getContentPane().add(btnLoggInn);
 		
 		textField = new JTextField();
-		textField.setBounds(153, 111, 134, 28);
+		textField.setBounds(79, 98, 134, 28);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(153, 71, 134, 28);
+		textField_1.setBounds(79, 47, 134, 28);
 		frame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 		
 		JLabel lblBrukernavn = new JLabel("Brukernavn");
-		lblBrukernavn.setBounds(68, 77, 79, 16);
+		lblBrukernavn.setBounds(6, 53, 79, 16);
 		frame.getContentPane().add(lblBrukernavn);
 		
 		JLabel lblPassord = new JLabel("Passord");
-		lblPassord.setBounds(68, 117, 61, 16);
+		lblPassord.setBounds(6, 104, 61, 16);
 		frame.getContentPane().add(lblPassord);
 	}
 }
