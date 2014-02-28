@@ -2,33 +2,29 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
-import java.awt.Canvas;
-import javax.swing.JMenuItem;
 import javax.swing.JMenu;
-import java.awt.TextField;
-import java.awt.BorderLayout;
-import javax.swing.JTextPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.JPanel;
-import java.awt.FlowLayout;
-import javax.swing.JButton;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
+import javax.swing.JMenuItem;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import java.awt.TextArea;
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.RowSpec;
 import com.jgoodies.forms.factories.FormFactory;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.List;
-import javax.swing.JComboBox;
-import java.awt.Choice;
-import java.awt.Button;
+import javax.swing.JScrollBar;
+import java.awt.Scrollbar;
+import javax.swing.JToggleButton;
+import javax.swing.JProgressBar;
+import java.awt.GridLayout;
+import javax.swing.BoxLayout;
+import java.awt.Panel;
+import java.awt.BorderLayout;
+import java.awt.CardLayout;
+import java.awt.Label;
+import javax.swing.JButton;
 
 
-public class Arkiv {
+public class Front {
 
 	private JFrame frame;
 
@@ -39,7 +35,7 @@ public class Arkiv {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Arkiv window = new Arkiv();
+					Front window = new Front();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -51,7 +47,7 @@ public class Arkiv {
 	/**
 	 * Create the application.
 	 */
-	public Arkiv() {
+	public Front() {
 		initialize();
 	}
 
@@ -90,11 +86,11 @@ public class Arkiv {
 		JMenuItem mntmGrafer = new JMenuItem("Grafer");
 		mnStatistikk.add(mntmGrafer);
 		
-		JMenuItem mntmMultivariatAnalyse = new JMenuItem("Multivariat analyse");
-		mnStatistikk.add(mntmMultivariatAnalyse);
+		JMenuItem mntmMultivariat = new JMenuItem("Multivariat analyse");
+		mnStatistikk.add(mntmMultivariat);
 		
-		JMenuItem mntmBivariatAnalyse = new JMenuItem("Bivariat analyse");
-		mnStatistikk.add(mntmBivariatAnalyse);
+		JMenuItem mntmBivariat = new JMenuItem("Bivariat analyse");
+		mnStatistikk.add(mntmBivariat);
 		
 		JMenuItem mntmUnivariatAnalyse = new JMenuItem("Univariat analyse");
 		mnStatistikk.add(mntmUnivariatAnalyse);
@@ -105,8 +101,8 @@ public class Arkiv {
 		JMenuItem mntmSettElg = new JMenuItem("Sett elg");
 		mnRegistrering.add(mntmSettElg);
 		
-		JMenuItem mntmTannAnalyse = new JMenuItem("Tannanalyse");
-		mnRegistrering.add(mntmTannAnalyse);
+		JMenuItem mntmTannanalyse = new JMenuItem("Tannanalyse");
+		mnRegistrering.add(mntmTannanalyse);
 		
 		JMenuItem mntmVrdata = new JMenuItem("V\u00E6rdata");
 		mnRegistrering.add(mntmVrdata);
@@ -121,21 +117,23 @@ public class Arkiv {
 		menuBar.add(mnArkiv);
 		frame.getContentPane().setLayout(null);
 		
-		Button button = new Button("Velg...");
-		button.setBounds(0, 60, 147, 20);
-		frame.getContentPane().add(button);
+		TextArea textArea = new TextArea();
+		textArea.setText("Import: Forklaring...");
+		textArea.setBounds(0, 50, 345, 143);
+		frame.getContentPane().add(textArea);
 		
-		Button button_1 = new Button("Velg dato");
-		button_1.setBounds(0, 114, 147, 22);
-		frame.getContentPane().add(button_1);
+		Label label = new Label("Import: Forklaring");
+		label.setBounds(0, 50, 327, 110);
+		frame.getContentPane().add(label);
 		
-		Button button_2 = new Button("Hent data");
-		button_2.setBounds(10, 179, 92, 22);
-		frame.getContentPane().add(button_2);
+		JButton btnNewButton = new JButton("Neste");
+		btnNewButton.setBounds(367, 207, 67, 23);
+		frame.getContentPane().add(btnNewButton);
 		
-		JTextArea txtrInfoFraArkiv = new JTextArea();
-		txtrInfoFraArkiv.setText("Info fra arkiv");
-		txtrInfoFraArkiv.setBounds(179, 56, 245, 93);
-		frame.getContentPane().add(txtrInfoFraArkiv);
+		Scrollbar scrollbar = new Scrollbar();
+		scrollbar.setVisibleAmount(6);
+		scrollbar.setOrientation(Scrollbar.HORIZONTAL);
+		scrollbar.setBounds(305, 199, 40, 40);
+		frame.getContentPane().add(scrollbar);
 	}
 }
