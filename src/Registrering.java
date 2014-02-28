@@ -138,6 +138,10 @@ public class Registrering extends Dialog {
 		Label lblJaktleder = new Label(shlMooseAnalytics, SWT.NONE);
 		lblJaktleder.setBounds(185, 173, 59, 14);
 		lblJaktleder.setText("Jaktleder");
+		
+		Button btnCheckButton = new Button(shlMooseAnalytics, SWT.CHECK);
+		btnCheckButton.setBounds(422, 98, 94, 18);
+		btnCheckButton.setText("Check Button");
 
 	}
 }
