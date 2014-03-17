@@ -5,6 +5,8 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 
 
 public class Registrering extends Dialog {
@@ -55,7 +57,7 @@ public class Registrering extends Dialog {
 	 */
 	private void createContents() {
 		shlMooseAnalytics = new Shell(getParent(), getStyle());
-		shlMooseAnalytics.setSize(627, 408);
+		shlMooseAnalytics.setSize(800, 600);
 		shlMooseAnalytics.setText("Moose Analytics");
 		
 		text = new Text(shlMooseAnalytics, SWT.BORDER);
@@ -92,8 +94,13 @@ public class Registrering extends Dialog {
 		text_11.setBounds(287, 148, 64, 19);
 		
 		Button btnLagre = new Button(shlMooseAnalytics, SWT.NONE);
-		btnLagre.setBounds(282, 201, 94, 28);
-		btnLagre.setText("Lagre");
+		btnLagre.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+			}
+		});
+		btnLagre.setBounds(269, 206, 94, 28);
+		btnLagre.setText("Registrer ");
 		
 		Label lblJaktfelt = new Label(shlMooseAnalytics, SWT.NONE);
 		lblJaktfelt.setBounds(21, 73, 59, 14);
@@ -138,10 +145,6 @@ public class Registrering extends Dialog {
 		Label lblJaktleder = new Label(shlMooseAnalytics, SWT.NONE);
 		lblJaktleder.setBounds(185, 173, 59, 14);
 		lblJaktleder.setText("Jaktleder");
-		
-		Button btnCheckButton = new Button(shlMooseAnalytics, SWT.CHECK);
-		btnCheckButton.setBounds(422, 98, 94, 18);
-		btnCheckButton.setText("Check Button");
 
 	}
 }

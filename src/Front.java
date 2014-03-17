@@ -25,6 +25,12 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import javax.swing.SpringLayout;
 
 
 public class Front {
@@ -120,47 +126,62 @@ public class Front {
 		
 		JMenu mnArkiv = new JMenu("Arkiv");
 		menuBar.add(mnArkiv);
-		frame.getContentPane().setLayout(null);
+		
+		JLabel lblBrukernavn = new JLabel("Brukernavn");
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		
+		Label label = new Label("Import: Forklaring");
 		
 		TextArea textArea = new TextArea();
 		textArea.setText("Import: Forklaring...");
-		textArea.setBounds(247, 47, 187, 104);
-		frame.getContentPane().add(textArea);
-		
-		Label label = new Label("Import: Forklaring");
-		label.setBounds(253, 47, 187, 66);
-		frame.getContentPane().add(label);
-		
-		JButton btnNewButton = new JButton("Neste");
-		btnNewButton.setBounds(367, 207, 67, 23);
-		frame.getContentPane().add(btnNewButton);
-		
-		Scrollbar scrollbar = new Scrollbar();
-		scrollbar.setVisibleAmount(6);
-		scrollbar.setOrientation(Scrollbar.HORIZONTAL);
-		scrollbar.setBounds(305, 199, 40, 40);
-		frame.getContentPane().add(scrollbar);
-		
-		JButton btnLoggInn = new JButton("Logg Inn");
-		btnLoggInn.setBounds(79, 146, 117, 29);
-		frame.getContentPane().add(btnLoggInn);
-		
-		textField_1 = new JTextField();
-		textField_1.setBounds(79, 47, 134, 28);
-		frame.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
-		
-		JLabel lblBrukernavn = new JLabel("Brukernavn");
-		lblBrukernavn.setBounds(6, 53, 79, 16);
-		frame.getContentPane().add(lblBrukernavn);
 		
 		JLabel lblPassord = new JLabel("Passord");
-		lblPassord.setBounds(6, 104, 61, 16);
-		frame.getContentPane().add(lblPassord);
+		
+		JButton btnLoggInn = new JButton("Logg Inn");
+		btnLoggInn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		
 		passwordField = new JPasswordField();
 		passwordField.setToolTipText("jgvfj");
-		passwordField.setBounds(79, 98, 134, 28);
-		frame.getContentPane().add(passwordField);
+		
+		JButton btnNewButton = new JButton("Neste");
+		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addComponent(lblBrukernavn, GroupLayout.PREFERRED_SIZE, 0, GroupLayout.PREFERRED_SIZE)
+				.addComponent(lblPassord, GroupLayout.PREFERRED_SIZE, 0, GroupLayout.PREFERRED_SIZE)
+				.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 0, GroupLayout.PREFERRED_SIZE)
+				.addComponent(passwordField, GroupLayout.PREFERRED_SIZE, 0, GroupLayout.PREFERRED_SIZE)
+				.addComponent(btnLoggInn, GroupLayout.PREFERRED_SIZE, 0, GroupLayout.PREFERRED_SIZE)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(30)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(textArea, GroupLayout.PREFERRED_SIZE, 604, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label, GroupLayout.PREFERRED_SIZE, 619, GroupLayout.PREFERRED_SIZE)))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(569)
+					.addComponent(btnNewButton))
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblBrukernavn, GroupLayout.PREFERRED_SIZE, 0, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblPassord, GroupLayout.PREFERRED_SIZE, 0, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 0, GroupLayout.PREFERRED_SIZE)
+						.addComponent(passwordField, GroupLayout.PREFERRED_SIZE, 0, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btnLoggInn, GroupLayout.PREFERRED_SIZE, 0, GroupLayout.PREFERRED_SIZE))
+					.addGap(29)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(textArea, GroupLayout.PREFERRED_SIZE, 164, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE))
+					.addGap(52)
+					.addComponent(btnNewButton))
+		);
+		frame.getContentPane().setLayout(groupLayout);
 	}
 }

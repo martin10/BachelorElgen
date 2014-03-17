@@ -14,7 +14,7 @@ import javax.swing.*;
 public class testGui extends JFrame implements ActionListener {
 
         private JButton btnTest;
-        private JMenuItem excelInn, excelUt, publisering, grafer, multivariat, bivariat, univariat, settElg, tannanalyse, værdata, skogsanalyse, beiteregistrering;
+        private JMenuItem excelInn, excelUt, publisering, grafer, multivariat, bivariat, univariat, settElg, tannanalyse, vï¿½rdata, skogsanalyse, beiteregistrering;
         private JPanel testContent, mainContent, loginContent;
         private JMenu hjemMenu;
         
@@ -64,12 +64,12 @@ public class testGui extends JFrame implements ActionListener {
         menuBar.add(registreringMenu);
         settElg = new JMenuItem("Sett elg");
         tannanalyse = new JMenuItem("Tannanalyse");
-        værdata = new JMenuItem("Værdata");
+        vï¿½rdata = new JMenuItem("Vï¿½rdata");
         skogsanalyse = new JMenuItem("Skogsanalyse");
         beiteregistrering = new JMenuItem("Beiteregistrering");
         registreringMenu.add(settElg);
         registreringMenu.add(tannanalyse);
-        registreringMenu.add(værdata);
+        registreringMenu.add(vï¿½rdata);
         registreringMenu.add(skogsanalyse);
         registreringMenu.add(beiteregistrering);
         
@@ -116,7 +116,7 @@ public class testGui extends JFrame implements ActionListener {
         univariat.addActionListener(this);
         settElg.addActionListener(this);
         tannanalyse.addActionListener(this);
-        værdata.addActionListener(this);
+        vï¿½rdata.addActionListener(this);
         skogsanalyse.addActionListener(this);
         beiteregistrering.addActionListener(this);
     

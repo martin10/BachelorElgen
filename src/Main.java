@@ -6,9 +6,6 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
-import org.eclipse.core.databinding.observable.Realm;
-import org.eclipse.jface.databinding.swt.SWTObservables;
-
 
 public class Main {
 	
@@ -21,17 +18,12 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Display display = Display.getDefault();
-		Realm.runWithDefault(SWTObservables.getRealm(display), new Runnable() {
-			public void run() {
-				try {
-					Main window = new Main();
-					window.open();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		try {
+			Main window = new Main();
+			window.open();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**

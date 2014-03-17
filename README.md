@@ -8,3 +8,5 @@ dette funker bra
 det funker fortsatt
 
 det funker enda
+
+hei 
